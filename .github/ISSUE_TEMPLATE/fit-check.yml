@@ -1,9 +1,6 @@
 name: "B2B AI Readiness Pack: public fit check"
 description: "Public, non-confidential fit-check note. Do not include personal data or secrets."
 title: "[Fit check] <pack> - <public URL/domain>"
-labels:
-  - fit-check
-  - needs-review
 body:
   - type: markdown
     attributes:
