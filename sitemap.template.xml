@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/fit-check.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/fit-check.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/samples.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/samples.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/memo-builder.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/memo-builder.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/ai-search-readiness.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/ai-search-readiness.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/support-faq-readiness.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/support-faq-readiness.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/workflow-automation-readiness.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/workflow-automation-readiness.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/buyer-faq.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/buyer-faq.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/pricing-scope.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/pricing-scope.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kaibuild.github.io/zero-spend-30day-ai-readiness/delivery-scope.html</loc>
+    <loc>https://YOUR_APPROVED_PUBLIC_URL/delivery-scope.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

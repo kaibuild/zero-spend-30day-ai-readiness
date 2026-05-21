@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>購入前FAQ | B2B AI Readiness Packs</title>
+  <meta name="description" content="B2B AI Readiness Packsの購入前FAQ。個人情報、秘密情報、ログイン情報なしで検討できる範囲、納品物、対象外、売上計上条件を整理します。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #13202b;
+      --muted: #5b6874;
+      --bg: #f6f7f4;
+      --paper: #ffffff;
+      --line: #d8ded8;
+      --green: #0f6b50;
+      --blue: #245c8f;
+      --rust: #8d4b2d;
+      --soft-green: #e7f3ed;
+      --soft-blue: #e8f0f8;
+      --soft-rust: #f8ece5;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: linear-gradient(135deg, rgba(15, 107, 80, 0.08), transparent 34%), linear-gradient(225deg, rgba(36, 92, 143, 0.07), transparent 30%), var(--bg); color: var(--ink); letter-spacing: 0; }
+    a { color: inherit; }
+    main { width: min(1120px, calc(100vw - 28px)); margin: 0 auto; padding: 24px 0 48px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+    .nav-links, .hero-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .eyebrow { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border: 1px solid rgba(15, 107, 80, 0.28); border-radius: 7px; color: var(--green); background: rgba(231, 243, 237, 0.72); font-size: 12px; font-weight: 820; text-decoration: none; }
+    h1 { margin: 12px 0 0; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.03; max-width: 900px; }
+    h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.18; }
+    h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; }
+    .lead, .section-lead { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 850px; }
+    .primary-cta, .ghost-cta { min-height: 46px; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; padding: 0 16px; font-weight: 820; text-decoration: none; }
+    .primary-cta { background: var(--ink); color: white; }
+    .ghost-cta { border: 1px solid var(--line); background: rgba(255,255,255,0.62); color: var(--ink); }
+    .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 34px rgba(19, 32, 43, 0.05); padding: 18px; margin-top: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfcfa; min-height: 170px; }
+    .tag { width: max-content; min-height: 26px; display: inline-flex; align-items: center; padding: 0 10px; border-radius: 7px; font-size: 12px; font-weight: 820; color: var(--blue); background: var(--soft-blue); margin-bottom: 10px; }
+    ul { padding-left: 20px; color: #293641; line-height: 1.65; }
+    .notice { border-left: 4px solid var(--rust); background: #fff9f4; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 36px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="nav-links">
+        <a class="ghost-cta" href="pricing-scope.html">価格</a>
+        <a class="ghost-cta" href="delivery-scope.html">納品範囲</a>
+        <a class="ghost-cta" href="memo-builder.html">公開メモ</a>
+      </div>
+    </nav>
+
+    <header>
+      <span class="eyebrow">Buyer FAQ</span>
+      <h1>購入前に迷いやすい質問だけを先に確認する</h1>
+      <p class="lead">このFAQは、個人情報や秘密情報を出さずに検討するための公開情報です。Issue、問い合わせ、関心表明は注文ではなく、確認可能な注文、決済、入金の証跡が出た場合だけ売上候補として扱います。</p>
+      <div class="hero-actions">
+        <a class="primary-cta" href="fit-check.html">自己診断を開く</a>
+        <a class="ghost-cta" href="samples.html">サンプルを見る</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>購入前FAQ</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">情報範囲</span>
+          <h3>どの情報を渡せば検討できますか。</h3>
+          <p class="section-lead">公開サイト、公開ヘルプ、公開サービスページ、非機密の業務概要だけで適合確認できます。個人名、メール、電話番号、顧客データ、問い合わせ履歴原文、ログイン情報、APIキー、秘密資料は不要です。</p>
+        </article>
+        <article class="card">
+          <span class="tag">対象</span>
+          <h3>どのパックを選べばよいですか。</h3>
+          <p class="section-lead">Webサイトや比較検討の不安ならAI検索パック、問い合わせ削減やAIチャットボット導入前ならFAQパック、業務改善ツール導入前なら自動化仕様書パックが合います。</p>
+        </article>
+        <article class="card">
+          <span class="tag">納期</span>
+          <h3>48時間で何が届きますか。</h3>
+          <p class="section-lead">公開情報をもとに、診断メモ、FAQ/仕様書/比較材料、実装チェックリスト、対象外とリスクの整理をMarkdownまたはHTMLで納品する想定です。</p>
+        </article>
+        <article class="card">
+          <span class="tag">準備</span>
+          <h3>社内資料がないと依頼できませんか。</h3>
+          <p class="section-lead">不要です。秘密資料を前提にしない範囲で、公開ページに足せる判断材料や、社内で次に確認する項目まで整理します。</p>
+        </article>
+        <article class="card">
+          <span class="tag">保証</span>
+          <h3>売上や問い合わせ増は保証されますか。</h3>
+          <p class="section-lead">保証しません。納品物は、導入前の判断材料、FAQ、比較軸、仕様書、リスク整理の下書きです。順位、AI回答掲載、売上、問い合わせ増、コスト削減は保証対象外です。</p>
+        </article>
+        <article class="card">
+          <span class="tag">対象外</span>
+          <h3>扱えない領域はありますか。</h3>
+          <p class="section-lead">医療、法律、金融、投資、税務、保険、ギャンブル、暗号資産、成人向け、武器、危険物などの規制性が高い領域は対象外です。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel notice">
+      <h2>公開Issueを使う場合の注意</h2>
+      <p class="section-lead">public fit-check Issueには非機密情報だけを書いてください。注文、決済、契約、請求、個人情報の扱い、外部返信はこのページでは実行しません。</p>
+      <div class="hero-actions">
+        <a class="primary-cta" href="memo-builder.html">公開メモを下書き</a>
+        <a class="ghost-cta" href="https://github.com/kaibuild/zero-spend-30day-ai-readiness/issues/new?template=fit-check.yml" target="_blank" rel="noopener">public fit-checkを開く</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>このページは非取引の公開情報です。決済リンク、送信フォーム、トラッキング、個人情報収集は含みません。</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -14,6 +14,9 @@ Self-serve pages:
 - https://kaibuild.github.io/zero-spend-30day-ai-readiness/ai-search-readiness.html
 - https://kaibuild.github.io/zero-spend-30day-ai-readiness/support-faq-readiness.html
 - https://kaibuild.github.io/zero-spend-30day-ai-readiness/workflow-automation-readiness.html
+- https://kaibuild.github.io/zero-spend-30day-ai-readiness/buyer-faq.html
+- https://kaibuild.github.io/zero-spend-30day-ai-readiness/pricing-scope.html
+- https://kaibuild.github.io/zero-spend-30day-ai-readiness/delivery-scope.html
 
 ## Public Fit Check
 

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>価格と追加判断 | B2B AI Readiness Packs</title>
+  <meta name="description" content="B2B AI Readiness Packsの価格、含まれる作業、含まれない作業、追加判断が必要な範囲を公開情報だけで確認できます。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #13202b;
+      --muted: #5b6874;
+      --bg: #f6f7f4;
+      --paper: #ffffff;
+      --line: #d8ded8;
+      --green: #0f6b50;
+      --blue: #245c8f;
+      --rust: #8d4b2d;
+      --soft-green: #e7f3ed;
+      --soft-rust: #f8ece5;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: linear-gradient(135deg, rgba(141, 75, 45, 0.08), transparent 34%), linear-gradient(225deg, rgba(15, 107, 80, 0.07), transparent 30%), var(--bg); color: var(--ink); letter-spacing: 0; }
+    a { color: inherit; }
+    main { width: min(1120px, calc(100vw - 28px)); margin: 0 auto; padding: 24px 0 48px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+    .nav-links, .hero-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .eyebrow { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border: 1px solid rgba(141, 75, 45, 0.28); border-radius: 7px; color: var(--rust); background: rgba(248, 236, 229, 0.74); font-size: 12px; font-weight: 820; text-decoration: none; }
+    h1 { margin: 12px 0 0; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.03; max-width: 900px; }
+    h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.18; }
+    h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; }
+    .lead, .section-lead { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 850px; }
+    .primary-cta, .ghost-cta { min-height: 46px; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; padding: 0 16px; font-weight: 820; text-decoration: none; }
+    .primary-cta { background: var(--ink); color: white; }
+    .ghost-cta { border: 1px solid var(--line); background: rgba(255,255,255,0.62); color: var(--ink); }
+    .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 34px rgba(19, 32, 43, 0.05); padding: 18px; margin-top: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .price-card { border: 1px solid var(--line); border-radius: 8px; padding: 16px; background: #fbfcfa; min-height: 250px; }
+    .price { font-size: 30px; font-weight: 860; margin: 8px 0; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { border-bottom: 1px solid var(--line); padding: 11px; text-align: left; vertical-align: top; line-height: 1.55; }
+    th { background: #f2f5f1; color: #34424e; font-size: 13px; }
+    ul { padding-left: 20px; color: #293641; line-height: 1.65; }
+    .notice { border-left: 4px solid var(--green); background: #f7fbf8; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 36px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="nav-links">
+        <a class="ghost-cta" href="buyer-faq.html">FAQ</a>
+        <a class="ghost-cta" href="delivery-scope.html">納品範囲</a>
+        <a class="ghost-cta" href="fit-check.html">自己診断</a>
+      </div>
+    </nav>
+
+    <header>
+      <span class="eyebrow">Pricing Scope</span>
+      <h1>価格の不安を、含む作業と含まない作業に分ける</h1>
+      <p class="lead">短期で判断しやすいよう、標準価格は200,000円に固定しています。ここでは価格の意味、追加費用になりやすい作業、承認が必要な外部操作を公開情報として整理します。</p>
+      <div class="hero-actions">
+        <a class="primary-cta" href="samples.html">サンプルを見る</a>
+        <a class="ghost-cta" href="memo-builder.html">公開メモを下書き</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>価格プラン</h2>
+      <div class="grid">
+        <article class="price-card">
+          <h3>Starter</h3>
+          <div class="price">100,000円</div>
+          <p class="section-lead">対象が小さく、公開ページ1つまたはFAQの一部だけを整理する場合の限定プランです。</p>
+          <ul><li>小規模診断</li><li>最小チェックリスト</li><li>短い改善メモ</li></ul>
+        </article>
+        <article class="price-card">
+          <h3>Standard</h3>
+          <div class="price">200,000円</div>
+          <p class="section-lead">基本プランです。3パックのどれか1つを、公開情報と非機密情報だけで48時間納品する想定です。</p>
+          <ul><li>診断</li><li>主要成果物</li><li>対象外とリスク整理</li></ul>
+        </article>
+        <article class="price-card">
+          <h3>Partner</h3>
+          <div class="price">300,000円</div>
+          <p class="section-lead">複数ページ、複数部門、比較材料の拡張など、社内説明まで厚くしたい場合の想定です。</p>
+          <ul><li>範囲拡張</li><li>比較表</li><li>実装順序の整理</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>含む作業と含まない作業</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>分類</th><th>含む</th><th>含まない</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>調査</td><td>公開サイト、公開ヘルプ、公開サービスページの確認。</td><td>ログイン後画面、顧客データ、秘密資料、個人情報の確認。</td></tr>
+            <tr><td>成果物</td><td>FAQ、比較材料、仕様書、リスク整理、実装チェックリスト。</td><td>本番実装、SaaS設定変更、API接続、CRM操作、メール送信。</td></tr>
+            <tr><td>外部操作</td><td>公開URLの閲覧、公開情報に基づく下書き作成。</td><td>投稿、送信、契約、請求、決済設定、本人確認、口座登録。</td></tr>
+            <tr><td>成果保証</td><td>判断材料と下書きの納品。</td><td>売上、順位、AI回答掲載、問い合わせ増、採用、コスト削減の保証。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel notice">
+      <h2>追加判断が必要なもの</h2>
+      <p class="section-lead">決済、請求、契約、ログイン、アカウント作成、個人情報処理、外部返信、投稿、送信、有料ツール利用が必要になった場合、この公開ページの範囲では進めません。別途、明確な承認が必要です。</p>
+    </section>
+
+    <footer>
+      <p>このページは価格の判断材料です。注文、決済、入金の確認可能な証跡が出るまで、売上として扱いません。</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>納品範囲比較 | B2B AI Readiness Packs</title>
+  <meta name="description" content="AI検索、AIサポートFAQ、AI業務自動化仕様書パックの納品範囲、向くケース、向かないケース、必要な公開情報を比較します。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #13202b;
+      --muted: #5b6874;
+      --bg: #f6f7f4;
+      --paper: #ffffff;
+      --line: #d8ded8;
+      --green: #0f6b50;
+      --blue: #245c8f;
+      --rust: #8d4b2d;
+      --soft-blue: #e8f0f8;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: linear-gradient(135deg, rgba(36, 92, 143, 0.08), transparent 34%), linear-gradient(225deg, rgba(141, 75, 45, 0.07), transparent 30%), var(--bg); color: var(--ink); letter-spacing: 0; }
+    a { color: inherit; }
+    main { width: min(1120px, calc(100vw - 28px)); margin: 0 auto; padding: 24px 0 48px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+    .nav-links, .hero-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .eyebrow { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border: 1px solid rgba(36, 92, 143, 0.28); border-radius: 7px; color: var(--blue); background: rgba(232, 240, 248, 0.76); font-size: 12px; font-weight: 820; text-decoration: none; }
+    h1 { margin: 12px 0 0; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.03; max-width: 900px; }
+    h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.18; }
+    h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; }
+    .lead, .section-lead { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 850px; }
+    .primary-cta, .ghost-cta { min-height: 46px; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; padding: 0 16px; font-weight: 820; text-decoration: none; }
+    .primary-cta { background: var(--ink); color: white; }
+    .ghost-cta { border: 1px solid var(--line); background: rgba(255,255,255,0.62); color: var(--ink); }
+    .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 34px rgba(19, 32, 43, 0.05); padding: 18px; margin-top: 18px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; }
+    th, td { border-bottom: 1px solid var(--line); padding: 11px; text-align: left; vertical-align: top; line-height: 1.55; }
+    th { background: #f2f5f1; color: #34424e; font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfcfa; min-height: 180px; }
+    ul { padding-left: 20px; color: #293641; line-height: 1.65; }
+    .notice { border-left: 4px solid var(--rust); background: #fff9f4; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 36px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="nav-links">
+        <a class="ghost-cta" href="buyer-faq.html">FAQ</a>
+        <a class="ghost-cta" href="pricing-scope.html">価格</a>
+        <a class="ghost-cta" href="samples.html">サンプル</a>
+      </div>
+    </nav>
+
+    <header>
+      <span class="eyebrow">Delivery Scope</span>
+      <h1>3つのパックの納品範囲を、用途別に比較する</h1>
+      <p class="lead">どれを選ぶべきか迷う場合は、今すぐ必要な判断材料で選びます。公開サイトを改善したいならAI検索、問い合わせ前FAQを整えたいならサポートFAQ、業務改善ツール導入前なら自動化仕様書が基本です。</p>
+      <div class="hero-actions">
+        <a class="primary-cta" href="fit-check.html">自己診断を開く</a>
+        <a class="ghost-cta" href="memo-builder.html">公開メモを下書き</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>納品範囲比較</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>パック</th><th>向くケース</th><th>主な納品物</th><th>必要な情報</th><th>向かないケース</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AI検索・LLM引用対応</td>
+              <td>公開サイトで何をしている会社か伝わりにくい。比較、FAQ、料金不安が弱い。</td>
+              <td>公開サイト診断、FAQ案、比較ページ構成、価格不安の整理、7日間チェックリスト。</td>
+              <td>公開URL、対象サービス、非機密の訴求メモ。</td>
+              <td>SEO順位保証や広告運用、本番CMS入稿まで必要な場合。</td>
+            </tr>
+            <tr>
+              <td>AIサポートFAQ</td>
+              <td>AIチャットボット導入前にFAQ、一次回答、禁止回答、エスカレーション基準を整えたい。</td>
+              <td>FAQ 30問、一次回答テンプレート15本、エスカレーション表、禁止回答リスト。</td>
+              <td>公開ヘルプ、公開FAQ、非機密の問い合わせ傾向。</td>
+              <td>顧客ごとの個別チケット分析やサポートSaaS設定変更が必要な場合。</td>
+            </tr>
+            <tr>
+              <td>AI業務自動化仕様書</td>
+              <td>自動化候補が多く、最初にどの業務をAI/自動化すべきか決めたい。</td>
+              <td>業務棚卸し、優先度スコア、As-Is/To-Be、入力/出力/例外/承認点、禁止自動化。</td>
+              <td>非機密の業務概要、対象部門、公開されている業務説明。</td>
+              <td>本番RPA構築、API接続、社内システム操作、個人情報処理が必要な場合。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>選び方</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Webで説明不足なら</h3>
+          <p class="section-lead">AI検索・LLM引用対応パックを選びます。対象読者、比較軸、FAQ、価格不安、対象外を公開ページ上で整理します。</p>
+        </article>
+        <article class="card">
+          <h3>問い合わせ前の不安なら</h3>
+          <p class="section-lead">AIサポートFAQパックを選びます。AIチャットボット導入前でも使えるFAQと一次回答の土台を作ります。</p>
+        </article>
+        <article class="card">
+          <h3>社内業務の迷いなら</h3>
+          <p class="section-lead">AI業務自動化仕様書パックを選びます。自動化すべき業務、避けるべき業務、承認点を先に分けます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel notice">
+      <h2>共通の対象外</h2>
+      <p class="section-lead">どのパックでも、個人情報、顧客リスト、問い合わせ履歴原文、ログイン情報、APIキー、秘密資料、決済情報、契約情報は扱いません。医療、法律、金融、投資、税務、保険、暗号資産などの規制性が高い領域も対象外です。</p>
+    </section>
+
+    <footer>
+      <p>この比較は発注前の判断材料です。public fit-check Issueや問い合わせは注文、決済、入金の証跡ではありません。</p>
+    </footer>
+  </main>
+</body>
+</html>
