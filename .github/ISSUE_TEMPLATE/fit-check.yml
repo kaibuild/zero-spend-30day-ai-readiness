@@ -1,0 +1,61 @@
+name: "B2B AI Readiness Pack: public fit check"
+description: "Public, non-confidential fit-check note. Do not include personal data or secrets."
+title: "[Fit check] <pack> - <public URL/domain>"
+labels:
+  - fit-check
+  - needs-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this only for public, non-confidential fit checks.
+
+        Do not include personal names, email addresses, phone numbers, addresses, customer records, private support tickets, credentials, API keys, card details, bank details, contracts, or confidential material.
+
+        This issue is not a completed order, payment, contract, invoice, or verified revenue record.
+  - type: dropdown
+    id: pack
+    attributes:
+      label: Pack
+      description: Choose one pack.
+      options:
+        - AI Search / LLM Visibility Revenue Path Pack
+        - AI Support FAQ / Knowledge Base Pack
+        - AI Workflow Automation Spec Pack
+    validations:
+      required: true
+  - type: input
+    id: public_url
+    attributes:
+      label: Public URL
+      description: Public website, public help center, or public service page only.
+      placeholder: "https://example.com/"
+    validations:
+      required: true
+  - type: textarea
+    id: non_confidential_context
+    attributes:
+      label: Non-confidential context
+      description: Summarize the problem without personal data, customer records, private tickets, credentials, or secrets.
+      placeholder: "Example: The public FAQ is sparse, comparison content is missing, and the team wants a 7-day implementation checklist."
+    validations:
+      required: true
+  - type: dropdown
+    id: price_understanding
+    attributes:
+      label: Price understanding
+      description: This confirms only that you understand the listed public price. It is not payment or a contract.
+      options:
+        - "I understand the Standard pack is 200,000 JPY."
+        - "I am only evaluating fit and not ready to discuss an order."
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: "I did not include personal data, customer data, credentials, API keys, payment details, bank details, contracts, or confidential material."
+          required: true
+        - label: "I understand this issue is not a completed order, payment, invoice, contract, or verified revenue record."
+          required: true
