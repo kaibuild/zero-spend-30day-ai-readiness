@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI業務自動化仕様書テンプレート | B2B AI Readiness Packs</title>
+  <meta name="description" content="AI業務自動化を始める前に、対象業務、入力、出力、例外、承認点、禁止自動化を非機密情報だけで整理する仕様書テンプレート。">
+  <style>
+    :root { color-scheme: light; --ink:#13202b; --muted:#5b6874; --bg:#f6f7f4; --paper:#fff; --line:#d8ded8; --rust:#8d4b2d; --green:#0f6b50; --blue:#245c8f; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(135deg, rgba(141,75,45,.08), transparent 34%), var(--bg); color:var(--ink); letter-spacing:0; }
+    a { color:inherit; }
+    main { width:min(1120px, calc(100vw - 28px)); margin:0 auto; padding:24px 0 48px; }
+    nav, .actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:space-between; }
+    .actions { justify-content:flex-start; margin-top:18px; }
+    .eyebrow { display:inline-flex; align-items:center; min-height:28px; padding:0 10px; border:1px solid rgba(141,75,45,.28); border-radius:7px; color:var(--rust); background:rgba(248,236,229,.74); font-size:12px; font-weight:820; text-decoration:none; }
+    h1 { margin:12px 0 0; font-size:clamp(34px,4.6vw,58px); line-height:1.03; max-width:940px; }
+    h2 { margin:0 0 12px; font-size:28px; line-height:1.18; }
+    h3 { margin:0 0 8px; font-size:20px; line-height:1.25; }
+    .lead, .text { color:var(--muted); font-size:16px; line-height:1.75; max-width:860px; }
+    .primary, .ghost { min-height:46px; border-radius:7px; display:inline-flex; align-items:center; justify-content:center; padding:0 16px; font-weight:820; text-decoration:none; }
+    .primary { background:var(--ink); color:white; }
+    .ghost { border:1px solid var(--line); background:rgba(255,255,255,.62); }
+    .panel { background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:0 12px 34px rgba(19,32,43,.05); padding:18px; margin-top:18px; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:14px; background:#fbfcfa; min-height:158px; }
+    .template { white-space:pre-wrap; border:1px solid var(--line); border-radius:8px; background:#fbfcfa; padding:14px; line-height:1.6; color:#27343f; overflow-x:auto; }
+    .notice { border-left:4px solid var(--rust); background:#fff9f4; }
+    footer { margin-top:20px; color:var(--muted); font-size:13px; line-height:1.6; }
+    @media (max-width:920px) { .grid { grid-template-columns:1fr; } h1 { font-size:36px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="actions">
+        <a class="ghost" href="workflow-automation-readiness.html">自動化仕様ガイド</a>
+        <a class="ghost" href="delivery-scope.html">納品範囲比較</a>
+      </div>
+    </nav>
+    <header>
+      <span class="eyebrow">Query guide / Automation Spec Template</span>
+      <h1>AI業務自動化の前に、仕様書で対象外と承認点を決める</h1>
+      <p class="lead">AIや自動化ツールを入れる前に、対象業務、入力、出力、例外、承認点、禁止自動化を分けると、過剰自動化や個人情報リスクを避けやすくなります。</p>
+      <div class="actions">
+        <a class="primary" href="memo-builder.html">公開メモを下書き</a>
+        <a class="ghost" href="fit-check.html">自己診断を開く</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>仕様書に入れる6項目</h2>
+      <div class="grid">
+        <div class="card"><h3>対象業務</h3><p class="text">1つの業務に絞り、開始条件と完了条件を明記します。</p></div>
+        <div class="card"><h3>入力</h3><p class="text">公開情報または非機密情報だけで説明できる入力に限定します。</p></div>
+        <div class="card"><h3>出力</h3><p class="text">誰が何に使う出力か、下書きか本番反映かを分けます。</p></div>
+        <div class="card"><h3>例外</h3><p class="text">判断不能、情報不足、規制領域、個人情報を含む場合の停止条件を決めます。</p></div>
+        <div class="card"><h3>承認点</h3><p class="text">人が確認するタイミング、外部送信前、契約前、請求前を明記します。</p></div>
+        <div class="card"><h3>禁止自動化</h3><p class="text">送信、投稿、削除、契約、決済、個人情報処理などを禁止リストにします。</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>非機密の仕様書テンプレート</h2>
+      <div class="template"># AI業務自動化 仕様書メモ
+
+- 対象業務:
+- 現在の流れ:
+- 望ましい流れ:
+- 入力:
+- 出力:
+- 例外:
+- 人の承認が必要な点:
+- 自動化してはいけないこと:
+- 使わない情報:
+- 最初の7日間で確認すること:</div>
+    </section>
+
+    <section class="panel notice">
+      <h2>このページの境界</h2>
+      <p class="text">本番RPA構築、API接続、SaaS設定変更、メール送信、CRM操作、契約、決済、個人情報処理は含みません。公開情報と非機密の業務概要だけで、導入前の仕様書に落とします。</p>
+    </section>
+    <footer><p>Issueや問い合わせは売上ではありません。注文、決済、入金の確認可能な証跡が出た時だけ売上候補として扱います。</p></footer>
+  </main>
+</body>
+</html>

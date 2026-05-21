@@ -63,6 +63,12 @@ Buyer decision pages:
 - Pricing and additional-scope guide: https://kaibuild.github.io/zero-spend-30day-ai-readiness/pricing-scope.html
 - Delivery scope comparison: https://kaibuild.github.io/zero-spend-30day-ai-readiness/delivery-scope.html
 
+Query-specific entry pages:
+
+- B2B SaaS AI search FAQ readiness: https://kaibuild.github.io/zero-spend-30day-ai-readiness/b2b-saas-ai-search-faq.html
+- AI chatbot FAQ preparation: https://kaibuild.github.io/zero-spend-30day-ai-readiness/ai-chatbot-faq-prep.html
+- AI workflow automation spec template: https://kaibuild.github.io/zero-spend-30day-ai-readiness/automation-spec-template.html
+
 Public fit check:
 
 The public page can point interested readers to a GitHub public issue template for a non-confidential fit check:

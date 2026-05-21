@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIチャットボット導入前FAQ整備 | B2B AI Readiness Packs</title>
+  <meta name="description" content="AIチャットボット導入前に必要なFAQ、一次回答、禁止回答、エスカレーション基準を、個人情報なしで整理するための公開チェックリスト。">
+  <style>
+    :root { color-scheme: light; --ink:#13202b; --muted:#5b6874; --bg:#f6f7f4; --paper:#fff; --line:#d8ded8; --blue:#245c8f; --green:#0f6b50; --rust:#8d4b2d; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(135deg, rgba(36,92,143,.08), transparent 34%), var(--bg); color:var(--ink); letter-spacing:0; }
+    a { color:inherit; }
+    main { width:min(1120px, calc(100vw - 28px)); margin:0 auto; padding:24px 0 48px; }
+    nav, .actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:space-between; }
+    .actions { justify-content:flex-start; margin-top:18px; }
+    .eyebrow { display:inline-flex; align-items:center; min-height:28px; padding:0 10px; border:1px solid rgba(36,92,143,.28); border-radius:7px; color:var(--blue); background:rgba(232,240,248,.76); font-size:12px; font-weight:820; text-decoration:none; }
+    h1 { margin:12px 0 0; font-size:clamp(34px,4.6vw,58px); line-height:1.03; max-width:940px; }
+    h2 { margin:0 0 12px; font-size:28px; line-height:1.18; }
+    h3 { margin:0 0 8px; font-size:20px; line-height:1.25; }
+    .lead, .text { color:var(--muted); font-size:16px; line-height:1.75; max-width:860px; }
+    .primary, .ghost { min-height:46px; border-radius:7px; display:inline-flex; align-items:center; justify-content:center; padding:0 16px; font-weight:820; text-decoration:none; }
+    .primary { background:var(--ink); color:white; }
+    .ghost { border:1px solid var(--line); background:rgba(255,255,255,.62); }
+    .panel { background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:0 12px 34px rgba(19,32,43,.05); padding:18px; margin-top:18px; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:14px; background:#fbfcfa; min-height:150px; }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; min-width:760px; }
+    th, td { border-bottom:1px solid var(--line); padding:11px; text-align:left; vertical-align:top; line-height:1.55; }
+    th { background:#f2f5f1; color:#34424e; font-size:13px; }
+    .notice { border-left:4px solid var(--rust); background:#fff9f4; }
+    footer { margin-top:20px; color:var(--muted); font-size:13px; line-height:1.6; }
+    @media (max-width:920px) { .grid { grid-template-columns:1fr; } h1 { font-size:36px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="actions">
+        <a class="ghost" href="support-faq-readiness.html">FAQ整備ガイド</a>
+        <a class="ghost" href="samples.html">サンプル</a>
+      </div>
+    </nav>
+    <header>
+      <span class="eyebrow">Query guide / AI Chatbot FAQ Prep</span>
+      <h1>AIチャットボット導入前に、FAQと禁止回答を先に整える</h1>
+      <p class="lead">AIチャットボットは、FAQ、一次回答、エスカレーション基準、禁止回答が曖昧なままだと運用リスクが上がります。まず公開ヘルプと非機密の問い合わせ傾向だけで、導入前の土台を整理します。</p>
+      <div class="actions">
+        <a class="primary" href="memo-builder.html">公開メモを下書き</a>
+        <a class="ghost" href="buyer-faq.html">購入前FAQを見る</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>導入前に決める4点</h2>
+      <div class="grid">
+        <div class="card"><h3>回答してよい質問</h3><p class="text">公開情報で回答できるFAQをカテゴリ別に並べます。</p></div>
+        <div class="card"><h3>人へ渡す質問</h3><p class="text">契約、返金、障害、個別アカウント、法務判断などを分けます。</p></div>
+        <div class="card"><h3>答えてはいけない質問</h3><p class="text">個人情報、秘密情報、推測、規制領域、保証表現を禁止回答に入れます。</p></div>
+        <div class="card"><h3>更新責任</h3><p class="text">FAQの更新担当、更新頻度、古い回答の停止条件を決めます。</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>納品物に落とせる形</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>材料</th><th>整理する内容</th><th>成果物</th></tr></thead>
+          <tbody>
+            <tr><td>公開ヘルプ</td><td>重複、曖昧表現、導入前に不足する質問。</td><td>FAQ 30問、一次回答テンプレート15本。</td></tr>
+            <tr><td>非機密の問い合わせ傾向</td><td>カテゴリ、緊急度、人へ渡す条件。</td><td>エスカレーション基準表。</td></tr>
+            <tr><td>対象外とリスク</td><td>答えない領域、保証しない成果、個人情報の扱い。</td><td>AI禁止回答リスト、公開注意書き案。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel notice">
+      <h2>扱わない情報</h2>
+      <p class="text">顧客別チケット、個人情報、ログイン後画面、秘密資料、APIキー、契約情報は使いません。公開ページと非機密の概要だけで準備します。</p>
+    </section>
+    <footer><p>これは導入前の判断材料です。チャットボット本番運用、SaaS設定変更、外部返信、決済は含みません。</p></footer>
+  </main>
+</body>
+</html>
