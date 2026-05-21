@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>架空サンプル成果物 | B2B AI Readiness Packs</title>
+  <meta name="description" content="AI検索対応、AIサポートFAQ、AI業務自動化仕様書パックの納品イメージを、非機密の架空サンプルで確認できます。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #13202b;
+      --muted: #5b6874;
+      --bg: #f6f7f4;
+      --paper: #ffffff;
+      --line: #d8ded8;
+      --green: #0f6b50;
+      --blue: #245c8f;
+      --rust: #8d4b2d;
+      --soft-green: #e7f3ed;
+      --soft-blue: #e8f0f8;
+      --soft-rust: #f8ece5;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(135deg, rgba(15, 107, 80, 0.08), transparent 34%),
+        linear-gradient(225deg, rgba(141, 75, 45, 0.08), transparent 30%),
+        var(--bg);
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+    a { color: inherit; }
+    main { width: min(1120px, calc(100vw - 28px)); margin: 0 auto; padding: 24px 0 48px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border: 1px solid rgba(15, 107, 80, 0.28);
+      border-radius: 7px;
+      color: var(--green);
+      background: rgba(231, 243, 237, 0.72);
+      font-size: 12px;
+      font-weight: 820;
+    }
+    h1 { margin: 12px 0 0; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.03; max-width: 860px; }
+    h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.18; }
+    h3 { margin: 0 0 8px; font-size: 21px; line-height: 1.25; }
+    .lead, .section-lead { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 820px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .primary-cta, .ghost-cta {
+      min-height: 46px;
+      border-radius: 7px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      font-weight: 820;
+      text-decoration: none;
+    }
+    .primary-cta { background: var(--ink); color: white; }
+    .ghost-cta { border: 1px solid var(--line); background: rgba(255,255,255,0.62); color: var(--ink); }
+    .panel, .sample {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 34px rgba(19, 32, 43, 0.05);
+    }
+    .panel { padding: 18px; margin-top: 18px; }
+    .sample { padding: 18px; margin-top: 12px; }
+    .tag {
+      width: max-content;
+      min-height: 26px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 820;
+    }
+    .tag.green { color: var(--green); background: var(--soft-green); }
+    .tag.blue { color: var(--blue); background: var(--soft-blue); }
+    .tag.rust { color: var(--rust); background: var(--soft-rust); }
+    .sample-grid { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.55fr); gap: 14px; align-items: start; }
+    .mini-table { width: 100%; border-collapse: collapse; min-width: 520px; }
+    .table-wrap { overflow-x: auto; }
+    th, td { border-bottom: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; line-height: 1.5; }
+    th { color: #34424e; font-size: 13px; background: #f2f5f1; }
+    td { color: #27343f; }
+    ul { padding-left: 20px; color: #293641; line-height: 1.6; }
+    .note { border-left: 4px solid var(--rust); background: #fff9f4; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 920px) {
+      .sample-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="nav-links">
+        <a class="ghost-cta" href="fit-check.html">自己診断</a>
+        <a class="ghost-cta" href="index.html#fit-check">公開メモ</a>
+      </div>
+    </nav>
+
+    <header>
+      <span class="eyebrow">Fictional delivery samples</span>
+      <h1>48時間納品の粒度を、架空サンプルで確認する</h1>
+      <p class="lead">以下はすべて架空ケースです。実在顧客、実績、レビューではありません。個人情報、顧客データ、秘密資料を使わない納品イメージだけを示します。</p>
+      <div class="hero-actions">
+        <a class="primary-cta" href="fit-check.html">自己診断を開く</a>
+        <a class="ghost-cta" href="https://github.com/kaibuild/zero-spend-30day-ai-readiness/issues/new?template=fit-check.yml" target="_blank" rel="noopener">公開メモを作る</a>
+      </div>
+    </header>
+
+    <section class="sample">
+      <span class="tag green">AI Search</span>
+      <h2>AI検索・LLM引用対応 売上導線改善パック</h2>
+      <div class="sample-grid">
+        <div>
+          <p class="section-lead">架空のB2B SaaS公開サイトを前提に、AI回答と人間の比較検討で不足しやすい材料を整理します。</p>
+          <div class="table-wrap">
+            <table class="mini-table">
+              <thead>
+                <tr><th>論点</th><th>公開ページで補う下書き</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>料金不安</td><td>初期費用、月額、導入作業、社内工数を分けてFAQ化する。</td></tr>
+                <tr><td>比較検討</td><td>表計算、汎用CRM、専用SaaSとの違いを「向く/向かない」で整理する。</td></tr>
+                <tr><td>導入手順</td><td>公開デモ、権限確認、CSV移行、初回設定、社内展開の順で見出しを作る。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="panel">
+          <h3>納品物</h3>
+          <ul>
+            <li>公開サイト3ページ診断</li>
+            <li>FAQ 15問</li>
+            <li>比較ページ構成案</li>
+            <li>7日間実装チェックリスト</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="sample">
+      <span class="tag blue">Support KB</span>
+      <h2>AIサポートFAQ/ナレッジベース整備パック</h2>
+      <div class="sample-grid">
+        <div>
+          <p class="section-lead">架空の予約管理サービスを前提に、AIチャットボット導入前のFAQ、一次回答、例外対応を整えます。</p>
+          <div class="table-wrap">
+            <table class="mini-table">
+              <thead>
+                <tr><th>問い合わせカテゴリ</th><th>一次回答の型</th><th>エスカレーション条件</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>予約変更</td><td>公開ヘルプURL、変更期限、管理画面の確認順を案内する。</td><td>請求、返金、本人確認が必要な場合。</td></tr>
+                <tr><td>通知不達</td><td>迷惑メール、送信元ドメイン、通知設定の確認順を案内する。</td><td>個別メールアドレスやログ調査が必要な場合。</td></tr>
+                <tr><td>権限設定</td><td>管理者、スタッフ、閲覧のみの権限差分を表にする。</td><td>実アカウント操作やログインが必要な場合。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="panel">
+          <h3>納品物</h3>
+          <ul>
+            <li>問い合わせ前FAQ 30問</li>
+            <li>一次回答テンプレート15本</li>
+            <li>エスカレーション基準表</li>
+            <li>AI禁止回答リスト</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="sample">
+      <span class="tag rust">Workflow Spec</span>
+      <h2>AI業務自動化 導入仕様書パック</h2>
+      <div class="sample-grid">
+        <div>
+          <p class="section-lead">架空の制作会社バックオフィスを前提に、自動化候補を棚卸しし、最初に仕様書化する業務を決めます。</p>
+          <div class="table-wrap">
+            <table class="mini-table">
+              <thead>
+                <tr><th>候補業務</th><th>優先度</th><th>仕様書に含める内容</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>見積前の要件整理</td><td>高</td><td>入力、出力、例外、承認点、禁止自動化を定義する。</td></tr>
+                <tr><td>週次進捗レポート</td><td>中</td><td>公開可能な進捗項目と、手入力が必要な判断を分ける。</td></tr>
+                <tr><td>請求前チェック</td><td>低</td><td>金額、契約、口座などの高リスク項目は自動化対象外にする。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="panel">
+          <h3>納品物</h3>
+          <ul>
+            <li>5業務の棚卸し</li>
+            <li>優先度スコアリング</li>
+            <li>As-Is / To-Be業務フロー</li>
+            <li>リスクと禁止自動化リスト</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel note">
+      <h2>このサンプルの前提</h2>
+      <p class="section-lead">サンプルは販売実績や顧客事例ではありません。実案件では、公開URLまたは非機密の業務概要だけを材料にし、ログイン、顧客データ、問い合わせ履歴原文、個人情報、契約、決済、口座情報は扱いません。</p>
+    </section>
+
+    <footer>
+      <p>Issueや問い合わせは注文、決済、入金の証跡ではないため、売上には数えません。確認可能な注文、決済、入金記録が出た時だけ売上候補として扱います。</p>
+    </footer>
+  </main>
+</body>
+</html>
+

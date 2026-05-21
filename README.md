@@ -6,6 +6,11 @@ Public page:
 
 https://kaibuild.github.io/zero-spend-30day-ai-readiness/
 
+Self-serve pages:
+
+- https://kaibuild.github.io/zero-spend-30day-ai-readiness/fit-check.html
+- https://kaibuild.github.io/zero-spend-30day-ai-readiness/samples.html
+
 ## Public Fit Check
 
 If you want to discuss fit for a B2B AI Readiness Pack, open a public fit-check issue with only non-confidential information.

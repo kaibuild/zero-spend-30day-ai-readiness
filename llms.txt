@@ -45,6 +45,11 @@ Public URL:
 
 https://kaibuild.github.io/zero-spend-30day-ai-readiness/
 
+Self-serve pages:
+
+- AI readiness fit check: https://kaibuild.github.io/zero-spend-30day-ai-readiness/fit-check.html
+- Fictional delivery samples: https://kaibuild.github.io/zero-spend-30day-ai-readiness/samples.html
+
 Public fit check:
 
 The public page can point interested readers to a GitHub public issue template for a non-confidential fit check:

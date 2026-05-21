@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Readiness 自己診断 | B2B AI Readiness Packs</title>
+  <meta name="description" content="個人情報なしで、AI検索対応、サポートFAQ、業務自動化仕様書のどのパックが合うかをブラウザ内で確認する自己診断。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #13202b;
+      --muted: #5b6874;
+      --bg: #f6f7f4;
+      --paper: #ffffff;
+      --line: #d8ded8;
+      --green: #0f6b50;
+      --blue: #245c8f;
+      --rust: #8d4b2d;
+      --soft-green: #e7f3ed;
+      --soft-blue: #e8f0f8;
+      --soft-rust: #f8ece5;
+      --shadow: 0 18px 50px rgba(19, 32, 43, 0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(135deg, rgba(15, 107, 80, 0.08), transparent 34%),
+        linear-gradient(225deg, rgba(36, 92, 143, 0.08), transparent 30%),
+        var(--bg);
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+    a { color: inherit; }
+    main { width: min(1120px, calc(100vw - 28px)); margin: 0 auto; padding: 24px 0 48px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border: 1px solid rgba(15, 107, 80, 0.28);
+      border-radius: 7px;
+      color: var(--green);
+      background: rgba(231, 243, 237, 0.72);
+      font-size: 12px;
+      font-weight: 820;
+    }
+    h1 { margin: 12px 0 0; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.03; max-width: 860px; }
+    h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.18; }
+    h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; }
+    .lead, .section-lead { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 790px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .primary-cta, .ghost-cta, button {
+      min-height: 46px;
+      border-radius: 7px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      font-weight: 820;
+      text-decoration: none;
+      font: inherit;
+      cursor: pointer;
+    }
+    .primary-cta, button { border: 0; background: var(--ink); color: white; }
+    .ghost-cta { border: 1px solid var(--line); background: rgba(255,255,255,0.62); color: var(--ink); }
+    .panel, .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 34px rgba(19, 32, 43, 0.05);
+    }
+    .panel { padding: 18px; margin-top: 18px; }
+    .grid { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.65fr); gap: 16px; align-items: start; }
+    .question-grid { display: grid; gap: 10px; }
+    .question {
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfa;
+    }
+    .question legend { font-weight: 820; margin-bottom: 4px; }
+    .options { display: grid; gap: 8px; }
+    label {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 8px;
+      align-items: start;
+      color: #293641;
+      line-height: 1.55;
+    }
+    input { margin-top: 4px; }
+    .score-card { position: sticky; top: 12px; padding: 18px; }
+    .score {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .score-line {
+      display: grid;
+      grid-template-columns: 86px 1fr 48px;
+      gap: 10px;
+      align-items: center;
+    }
+    .score-line strong { font-size: 13px; }
+    .bar { height: 13px; border-radius: 999px; background: #e4e9e3; overflow: hidden; }
+    .bar span { display: block; width: 0%; height: 100%; border-radius: inherit; transition: width 160ms ease; }
+    .bar.green span { background: var(--green); }
+    .bar.blue span { background: var(--blue); }
+    .bar.rust span { background: var(--rust); }
+    .recommendation { padding: 14px; border-radius: 8px; background: var(--soft-blue); color: #24465f; line-height: 1.65; }
+    .notice { border-left: 4px solid var(--rust); background: #fff9f4; }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .step { border: 1px solid var(--line); border-radius: 8px; padding: 13px; background: #fbfcfa; min-height: 126px; }
+    .step b { display: block; font-size: 14px; margin-bottom: 8px; }
+    .step p { margin: 0; color: var(--muted); line-height: 1.62; font-size: 13px; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 920px) {
+      .grid, .steps { grid-template-columns: 1fr; }
+      .score-card { position: static; }
+      h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="nav-links">
+        <a class="ghost-cta" href="samples.html">サンプル</a>
+        <a class="ghost-cta" href="index.html#fit-check">公開メモ</a>
+      </div>
+    </nav>
+
+    <header>
+      <span class="eyebrow">No personal data fit check</span>
+      <h1>公開情報だけで、AI導入前の優先パックを絞る</h1>
+      <p class="lead">この自己診断はブラウザ内でのみ計算します。入力内容は送信、保存、追跡されません。個人情報、顧客データ、秘密資料、ログイン情報は入れないでください。</p>
+    </header>
+
+    <section class="grid">
+      <form class="panel" id="fitForm">
+        <h2>12項目チェック</h2>
+        <p class="section-lead">公開サイト、公開ヘルプ、公開業務説明だけを前提に回答してください。</p>
+        <div class="question-grid">
+          <fieldset class="question">
+            <legend>公開サイトに、料金・導入手順・比較検討の不安が残っている</legend>
+            <div class="options">
+              <label><input type="radio" name="q1" value="search:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q1" value="search:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q1" value="search:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>FAQや比較ページが少なく、AI回答に引用される材料が弱い</legend>
+            <div class="options">
+              <label><input type="radio" name="q2" value="search:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q2" value="search:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q2" value="search:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>導入前の反論、対象外、制約、代替案が公開ページで整理されていない</legend>
+            <div class="options">
+              <label><input type="radio" name="q3" value="search:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q3" value="search:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q3" value="search:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>サポート前FAQ、一次回答、エスカレーション基準が不足している</legend>
+            <div class="options">
+              <label><input type="radio" name="q4" value="support:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q4" value="support:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q4" value="support:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>AIチャットボット導入前に、禁止回答や例外対応を整理したい</legend>
+            <div class="options">
+              <label><input type="radio" name="q5" value="support:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q5" value="support:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q5" value="support:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>問い合わせ内容を、個人情報なしのカテゴリ単位で再整理したい</legend>
+            <div class="options">
+              <label><input type="radio" name="q6" value="support:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q6" value="support:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q6" value="support:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>自動化したい業務候補はあるが、最初の1業務を決められていない</legend>
+            <div class="options">
+              <label><input type="radio" name="q7" value="workflow:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q7" value="workflow:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q7" value="workflow:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>As-Is / To-Be、例外、承認点、禁止自動化の整理がない</legend>
+            <div class="options">
+              <label><input type="radio" name="q8" value="workflow:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q8" value="workflow:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q8" value="workflow:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>外部SaaSを触る前に、仕様書とリスク表だけを先に作りたい</legend>
+            <div class="options">
+              <label><input type="radio" name="q9" value="workflow:2" checked> 強く当てはまる</label>
+              <label><input type="radio" name="q9" value="workflow:1"> 少し当てはまる</label>
+              <label><input type="radio" name="q9" value="workflow:0"> あまり当てはまらない</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>対象は医療、法律、金融、投資、税務、保険などの規制領域ではない</legend>
+            <div class="options">
+              <label><input type="radio" name="q10" value="safe:2" checked> はい</label>
+              <label><input type="radio" name="q10" value="safe:-4"> いいえ、または判断が必要</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>公開URLまたは非機密の業務概要だけで依頼できる</legend>
+            <div class="options">
+              <label><input type="radio" name="q11" value="safe:2" checked> はい</label>
+              <label><input type="radio" name="q11" value="safe:-3"> いいえ、秘密資料やログインが必要</label>
+            </div>
+          </fieldset>
+          <fieldset class="question">
+            <legend>成果保証ではなく、実装前の判断材料と下書き一式として使う</legend>
+            <div class="options">
+              <label><input type="radio" name="q12" value="safe:2" checked> はい</label>
+              <label><input type="radio" name="q12" value="safe:-3"> いいえ、成果保証が必要</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="hero-actions">
+          <button type="button" id="scoreButton">結果を更新</button>
+          <a class="ghost-cta" href="samples.html">サンプルを見る</a>
+        </div>
+      </form>
+
+      <aside class="panel score-card">
+        <h2>診断結果</h2>
+        <div class="score">
+          <div class="score-line"><strong>AI検索</strong><div class="bar green"><span id="searchBar"></span></div><b id="searchScore">0</b></div>
+          <div class="score-line"><strong>FAQ</strong><div class="bar blue"><span id="supportBar"></span></div><b id="supportScore">0</b></div>
+          <div class="score-line"><strong>自動化</strong><div class="bar rust"><span id="workflowBar"></span></div><b id="workflowScore">0</b></div>
+        </div>
+        <div class="recommendation" id="recommendation" role="status"></div>
+        <div class="hero-actions">
+          <a class="primary-cta" href="https://github.com/kaibuild/zero-spend-30day-ai-readiness/issues/new?template=fit-check.yml" target="_blank" rel="noopener">公開メモを作る</a>
+          <a class="ghost-cta" href="index.html">商品ページへ戻る</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel notice">
+      <h2>扱わないもの</h2>
+      <div class="steps">
+        <div class="step"><b>個人情報</b><p>個人名、メール、電話番号、住所、顧客リスト、問い合わせ履歴原文は不要です。</p></div>
+        <div class="step"><b>機密情報</b><p>ログイン情報、APIキー、秘密資料、契約、決済情報、口座情報は送らないでください。</p></div>
+        <div class="step"><b>成果保証</b><p>売上、順位、問い合わせ増、AI回答引用、コスト削減は保証しません。</p></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>このページは静的HTMLです。入力内容を送信、保存、追跡しません。Issueや問い合わせは注文、決済、入金の証跡ではないため、売上には数えません。</p>
+    </footer>
+  </main>
+  <script>
+    const packNames = {
+      search: "AI検索・LLM引用対応 売上導線改善パック",
+      support: "AIサポートFAQ/ナレッジベース整備パック",
+      workflow: "AI業務自動化 導入仕様書パック"
+    };
+    const resultText = {
+      search: "公開サイトのFAQ、比較、料金不安、導入手順を先に整えると、AI回答と人間の比較検討で理解されやすくなります。",
+      support: "FAQ、一次回答、エスカレーション基準、禁止回答を先に整えると、AIサポート導入前の事故を減らせます。",
+      workflow: "自動化候補、例外、承認点、禁止自動化を先に仕様書化すると、ツール導入前の手戻りを減らせます。"
+    };
+
+    function calculate() {
+      const scores = { search: 0, support: 0, workflow: 0, safe: 0 };
+      const selected = document.querySelectorAll("input[type='radio']:checked");
+      selected.forEach((input) => {
+        const [key, raw] = input.value.split(":");
+        scores[key] += Number(raw);
+      });
+      const maxScore = 6;
+      ["search", "support", "workflow"].forEach((key) => {
+        const safeAdjusted = Math.max(0, Math.min(maxScore, scores[key] + Math.min(0, scores.safe)));
+        const percentage = Math.round((safeAdjusted / maxScore) * 100);
+        document.getElementById(`${key}Bar`).style.width = `${percentage}%`;
+        document.getElementById(`${key}Score`).textContent = `${percentage}`;
+      });
+      const unsafe = scores.safe < 2;
+      const top = ["search", "support", "workflow"].sort((a, b) => scores[b] - scores[a])[0];
+      const recommendation = document.getElementById("recommendation");
+      if (unsafe) {
+        recommendation.textContent = "規制領域、秘密資料、ログイン、成果保証が必要な場合は対象外です。公開URLと非機密情報だけで扱える範囲に絞ってください。";
+      } else {
+        recommendation.textContent = `優先候補は「${packNames[top]}」です。${resultText[top]}公開メモには個人情報や秘密情報を書かず、対象URLと非機密の背景だけを入れてください。`;
+      }
+    }
+
+    document.getElementById("fitForm").addEventListener("change", calculate);
+    document.getElementById("scoreButton").addEventListener("click", calculate);
+    calculate();
+  </script>
+</body>
+</html>
+
