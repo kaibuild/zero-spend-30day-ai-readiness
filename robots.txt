@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaibuild.github.io/zero-spend-30day-ai-readiness/sitemap.xml

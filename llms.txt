@@ -1,0 +1,46 @@
+# B2B AI Readiness Packs
+
+> Public product page for B2B AI readiness deliverable packs. Sales, payment, and contact links are not included in this file.
+
+This local site describes three B2B digital deliverable packs for teams preparing AI-related improvements without sharing personal data, login credentials, customer lists, API keys, or confidential material.
+
+Products:
+
+1. AI Search / LLM Visibility Revenue Path Pack
+   - Public-site diagnosis
+   - FAQ improvements
+   - Comparison page outline
+   - Pricing, implementation, and support concern copy
+   - 7-day implementation checklist
+
+2. AI Support FAQ / Knowledge Base Pack
+   - Public help/FAQ diagnosis
+   - 30 pre-contact FAQ items
+   - 15 first-response templates
+   - Escalation criteria
+   - AI prohibited-answer list
+
+3. AI Workflow Automation Spec Pack
+   - Workflow candidate inventory
+   - Priority scoring
+   - As-Is / To-Be workflow
+   - Inputs, outputs, exceptions, approval points
+   - Automation risk and prohibited-automation list
+
+Pricing draft:
+
+- Starter: 100,000 JPY
+- Standard: 200,000 JPY
+- Partner: 300,000 JPY
+
+Excluded domains:
+
+Medical, legal, financial, tax, insurance, investment, gambling, crypto, adult, weapons, dangerous goods, and other regulated or high-risk domains.
+
+No guarantees:
+
+This service does not guarantee revenue, ranking, inquiries, hiring, cost reduction, AI answer inclusion, or operational outcomes.
+
+Public URL:
+
+https://kaibuild.github.io/zero-spend-30day-ai-readiness/

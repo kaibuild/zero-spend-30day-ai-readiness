@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B2B AI Readiness Packs | AI導入前診断パック</title>
+  <meta name="description" content="AI検索対応、AIサポートFAQ、AI業務自動化仕様書を短納期で納品するB2B向けデジタル成果物パック。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #13202b;
+      --muted: #5b6874;
+      --bg: #f6f7f4;
+      --paper: #ffffff;
+      --line: #d8ded8;
+      --green: #0f6b50;
+      --blue: #245c8f;
+      --rust: #8d4b2d;
+      --soft-green: #e7f3ed;
+      --soft-blue: #e8f0f8;
+      --soft-rust: #f8ece5;
+      --shadow: 0 18px 50px rgba(19, 32, 43, 0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(135deg, rgba(15, 107, 80, 0.08), transparent 34%),
+        linear-gradient(225deg, rgba(141, 75, 45, 0.08), transparent 30%),
+        var(--bg);
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+    a { color: inherit; }
+    main { width: min(1120px, calc(100vw - 28px)); margin: 0 auto; padding: 24px 0 48px; }
+    .hero {
+      min-height: 72vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 28px;
+      align-items: center;
+      padding: 34px 0 18px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border: 1px solid rgba(15, 107, 80, 0.28);
+      border-radius: 7px;
+      color: var(--green);
+      background: rgba(231, 243, 237, 0.72);
+      font-size: 12px;
+      font-weight: 820;
+    }
+    h1 { margin: 14px 0 0; font-size: clamp(34px, 4.9vw, 62px); line-height: 1.02; max-width: 820px; }
+    .lead { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 760px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .primary-cta, .ghost-cta {
+      min-height: 46px;
+      border-radius: 7px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      font-weight: 820;
+      text-decoration: none;
+    }
+    .primary-cta { background: var(--ink); color: white; }
+    .ghost-cta { border: 1px solid var(--line); background: rgba(255,255,255,0.62); color: var(--ink); }
+    .visual {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .visual-grid { display: grid; gap: 10px; }
+    .visual-row {
+      display: grid;
+      grid-template-columns: 96px 1fr 58px;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfa;
+    }
+    .visual-row strong { font-size: 13px; }
+    .bar { height: 12px; border-radius: 999px; background: #e4e9e3; overflow: hidden; }
+    .bar span { display: block; height: 100%; border-radius: inherit; }
+    .bar.green span { width: 86%; background: var(--green); }
+    .bar.blue span { width: 78%; background: var(--blue); }
+    .bar.rust span { width: 82%; background: var(--rust); }
+    .visual-note { margin-top: 14px; padding: 12px; border-radius: 8px; background: var(--soft-blue); color: #24465f; line-height: 1.6; font-size: 13px; }
+    section { margin-top: 18px; }
+    h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.18; }
+    .section-lead { color: var(--muted); line-height: 1.7; max-width: 780px; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .card, .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 34px rgba(19, 32, 43, 0.05);
+    }
+    .card { padding: 18px; min-height: 438px; display: flex; flex-direction: column; }
+    .tag {
+      width: max-content;
+      min-height: 26px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 820;
+    }
+    .tag.green { color: var(--green); background: var(--soft-green); }
+    .tag.blue { color: var(--blue); background: var(--soft-blue); }
+    .tag.rust { color: var(--rust); background: var(--soft-rust); }
+    h3 { margin: 12px 0 8px; font-size: 21px; line-height: 1.25; }
+    .price { font-size: 30px; font-weight: 860; margin: 10px 0; }
+    ul { padding-left: 20px; color: #293641; line-height: 1.58; }
+    .card .primary-cta { margin-top: auto; min-height: 42px; }
+    .panel { padding: 18px; }
+    .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px;
+      background: #fbfcfa;
+      min-height: 150px;
+    }
+    .step b { display: block; font-size: 14px; margin-bottom: 8px; }
+    .step p { margin: 0; color: var(--muted); line-height: 1.62; font-size: 13px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { border-bottom: 1px solid var(--line); padding: 12px; text-align: left; vertical-align: top; line-height: 1.5; }
+    th { color: #34424e; font-size: 13px; background: #f2f5f1; }
+    td { color: #27343f; }
+    .notice { border-left: 4px solid var(--rust); background: #fff9f4; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 920px) {
+      .hero { min-height: auto; grid-template-columns: 1fr; padding-top: 26px; }
+      .cards, .steps { grid-template-columns: 1fr; }
+      h1 { font-size: 36px; }
+      .card { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">B2B AI readiness deliverables</span>
+        <h1>AI導入前の「迷い」を、48時間で納品できるB2B成果物に変える</h1>
+        <p class="lead">公開URLまたは非機密の業務概要だけを材料に、AI検索対応、サポートFAQ整備、業務自動化仕様書のいずれかを短納期で作成します。顧客データ、ログイン情報、APIキー、秘密資料は不要です。</p>
+        <div class="hero-actions">
+          <a class="primary-cta" href="#packs">3つのパックを見る</a>
+          <a class="ghost-cta" href="#fit">購入前の確認事項</a>
+        </div>
+      </div>
+      <aside class="visual" aria-label="商品別の準備状況">
+        <div class="visual-grid">
+          <div class="visual-row">
+            <strong>AI検索</strong>
+            <div class="bar green"><span></span></div>
+            <b>86%</b>
+          </div>
+          <div class="visual-row">
+            <strong>FAQ整備</strong>
+            <div class="bar blue"><span></span></div>
+            <b>78%</b>
+          </div>
+          <div class="visual-row">
+            <strong>自動化仕様</strong>
+            <div class="bar rust"><span></span></div>
+            <b>82%</b>
+          </div>
+        </div>
+        <div class="visual-note">公開情報と非機密情報だけを使い、AI導入前に不足しやすいFAQ、比較材料、業務フロー、リスク整理を短納期でまとめます。</div>
+      </aside>
+    </section>
+
+    <section id="packs">
+      <h2>選べる3つのパック</h2>
+      <p class="section-lead">短期売上化のため、標準プランは200,000円に固定します。100万円到達モデルはStandard 5件、またはPartner 4件です。</p>
+      <div class="cards">
+        <article class="card">
+          <span class="tag green">AI Search</span>
+          <h3>AI検索・LLM引用対応 売上導線改善パック</h3>
+          <div class="price">200,000円</div>
+          <p class="section-lead">公開サイトのFAQ、比較、料金不安、導入手順を整え、AI回答と人間の比較検討で理解されやすい構造にします。</p>
+          <ul>
+            <li>公開サイト3ページ診断</li>
+            <li>FAQ 15問</li>
+            <li>比較ページ構成案</li>
+            <li>7日間実装チェックリスト</li>
+          </ul>
+          <span class="primary-cta">標準納期 48時間</span>
+        </article>
+
+        <article class="card">
+          <span class="tag blue">Support KB</span>
+          <h3>AIサポートFAQ/ナレッジベース整備パック</h3>
+          <div class="price">200,000円</div>
+          <p class="section-lead">AIチャットボット導入前に、FAQ、一次回答、エスカレーション基準、禁止回答リストを整えます。</p>
+          <ul>
+            <li>問い合わせ前FAQ 30問</li>
+            <li>一次回答テンプレート15本</li>
+            <li>エスカレーション基準表</li>
+            <li>AI禁止回答リスト</li>
+          </ul>
+          <span class="primary-cta">標準納期 48時間</span>
+        </article>
+
+        <article class="card">
+          <span class="tag rust">Workflow Spec</span>
+          <h3>AI業務自動化 導入仕様書パック</h3>
+          <div class="price">200,000円</div>
+          <p class="section-lead">ツール導入前に自動化候補を棚卸しし、最初に実装すべき1業務を仕様書に落とします。</p>
+          <ul>
+            <li>5業務の棚卸し</li>
+            <li>優先度スコアリング</li>
+            <li>As-Is / To-Be業務フロー</li>
+            <li>リスクと禁止自動化リスト</li>
+          </ul>
+          <span class="primary-cta">標準納期 48時間</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="fit">
+      <h2>納品フロー</h2>
+      <div class="steps">
+        <div class="step"><b>1. テーマ選択</b><p>3パックから1つ選び、対象URLまたは非機密の業務概要だけを共有します。</p></div>
+        <div class="step"><b>2. 診断</b><p>公開情報をもとに不足、優先度、実装しやすさ、リスクを整理します。</p></div>
+        <div class="step"><b>3. 成果物作成</b><p>Markdownレポート、HTMLデモ、チェックリスト、引継ぎメモを作成します。</p></div>
+        <div class="step"><b>4. 納品</b><p>成果保証ではなく、実装前に使える判断材料と下書き一式を納品します。</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>購入前に確認すること</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>対応</th>
+              <th>対応しないこと</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>利用データ</td>
+              <td>公開URL、公開ヘルプ、非機密の業務概要</td>
+              <td>個人情報、顧客リスト、問い合わせ履歴原文、秘密資料、ログイン後情報</td>
+            </tr>
+            <tr>
+              <td>AI/自動化</td>
+              <td>仕様書、FAQ、チェックリスト、リスク整理</td>
+              <td>本番API接続、外部SaaS設定変更、メール送信、CRM操作、公開チャットボット運用</td>
+            </tr>
+            <tr>
+              <td>成果</td>
+              <td>実装前の判断材料と、Web/サポート/業務改善に転用できる下書き</td>
+              <td>売上、順位、問い合わせ増、採用、コスト削減、AI回答引用の保証</td>
+            </tr>
+            <tr>
+              <td>対象外</td>
+              <td>B2Bの一般業務、公開サイト、サポートFAQ、非規制領域</td>
+              <td>医療、法律、金融、投資、税務、保険、ギャンブル、暗号資産、成人向け、武器、危険物</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel notice">
+      <h2>受付導線について</h2>
+      <p class="section-lead">このページは商品説明ページです。購入、相談、見積依頼の受付方法は、正式な販売導線が用意できた時点でこのページ上に追記します。成果保証ではなく、実装前の判断材料と下書き一式を納品します。</p>
+    </section>
+
+    <footer>
+      <p>個人情報、顧客リスト、ログイン情報、APIキー、秘密資料は扱いません。医療、法律、金融、投資、税務、保険、暗号資産など規制性の高い領域は対象外です。</p>
+    </footer>
+  </main>
+</body>
+</html>
