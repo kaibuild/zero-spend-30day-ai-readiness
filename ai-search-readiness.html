@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI検索・LLM引用対応チェックリスト | B2B AI Readiness Packs</title>
+  <meta name="description" content="B2BサイトがAI検索やLLM回答で理解されやすくなるための公開情報チェックリスト。個人情報や秘密情報は不要です。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #13202b;
+      --muted: #5b6874;
+      --bg: #f6f7f4;
+      --paper: #ffffff;
+      --line: #d8ded8;
+      --green: #0f6b50;
+      --blue: #245c8f;
+      --rust: #8d4b2d;
+      --soft-green: #e7f3ed;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: linear-gradient(135deg, rgba(15, 107, 80, 0.08), transparent 34%), var(--bg); color: var(--ink); letter-spacing: 0; }
+    a { color: inherit; }
+    main { width: min(1120px, calc(100vw - 28px)); margin: 0 auto; padding: 24px 0 48px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+    .nav-links, .hero-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .eyebrow { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border: 1px solid rgba(15, 107, 80, 0.28); border-radius: 7px; color: var(--green); background: rgba(231, 243, 237, 0.72); font-size: 12px; font-weight: 820; }
+    h1 { margin: 12px 0 0; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.03; max-width: 900px; }
+    h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.18; }
+    h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; }
+    .lead, .section-lead { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 850px; }
+    .primary-cta, .ghost-cta { min-height: 46px; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; padding: 0 16px; font-weight: 820; text-decoration: none; }
+    .primary-cta { background: var(--ink); color: white; }
+    .ghost-cta { border: 1px solid var(--line); background: rgba(255,255,255,0.62); color: var(--ink); }
+    .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 34px rgba(19, 32, 43, 0.05); padding: 18px; margin-top: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfcfa; min-height: 160px; }
+    ul { padding-left: 20px; color: #293641; line-height: 1.65; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    .table-wrap { overflow-x: auto; }
+    th, td { border-bottom: 1px solid var(--line); padding: 11px; text-align: left; vertical-align: top; line-height: 1.55; }
+    th { background: #f2f5f1; color: #34424e; font-size: 13px; }
+    .notice { border-left: 4px solid var(--rust); background: #fff9f4; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 36px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="nav-links">
+        <a class="ghost-cta" href="support-faq-readiness.html">FAQ整備</a>
+        <a class="ghost-cta" href="workflow-automation-readiness.html">自動化仕様</a>
+        <a class="ghost-cta" href="memo-builder.html">公開メモ</a>
+      </div>
+    </nav>
+
+    <header>
+      <span class="eyebrow">AI Search / LLM Visibility</span>
+      <h1>B2BサイトがAI検索で理解されるための公開情報チェックリスト</h1>
+      <p class="lead">AI回答や比較検討で引用されるには、公開ページ上に「誰向けか」「何を解決するか」「向く/向かない」「価格不安」「導入手順」「サポート境界」が明確にあることが重要です。このページは公開情報だけで確認できます。</p>
+      <div class="hero-actions">
+        <a class="primary-cta" href="memo-builder.html">公開メモを下書き</a>
+        <a class="ghost-cta" href="fit-check.html">自己診断を開く</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>まず確認する6項目</h2>
+      <div class="grid">
+        <div class="card"><h3>対象読者</h3><p class="section-lead">業種、会社規模、利用部門、導入前の状態が1ページ目で分かる。</p></div>
+        <div class="card"><h3>比較軸</h3><p class="section-lead">代替手段、競合カテゴリ、内製との違いを「向く/向かない」で説明している。</p></div>
+        <div class="card"><h3>価格不安</h3><p class="section-lead">初期費用、月額、社内工数、追加作業、対象外が切り分けられている。</p></div>
+        <div class="card"><h3>導入手順</h3><p class="section-lead">相談前、契約前、初回設定、社内展開、運用開始の順序が公開されている。</p></div>
+        <div class="card"><h3>FAQ</h3><p class="section-lead">導入前に聞かれる質問が15問以上あり、具体的な判断材料になっている。</p></div>
+        <div class="card"><h3>制約</h3><p class="section-lead">扱わない業務、保証しない成果、規制領域、ログインや個人情報の扱いが明記されている。</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>公開ページに足すと強くなる材料</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>不足しやすい材料</th><th>追加する下書き</th><th>AI回答での効き方</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>料金の納得材料</td><td>価格に含む作業、含まない作業、追加判断が必要な作業を表にする。</td><td>費用感と対象外を誤解されにくくする。</td></tr>
+            <tr><td>導入前FAQ</td><td>「誰が準備するか」「どのデータが必要か」「いつ使えるか」をFAQ化する。</td><td>導入前の不安を回答しやすくする。</td></tr>
+            <tr><td>比較ページ</td><td>内製、表計算、汎用ツール、専用ツールの違いを用途別に整理する。</td><td>比較クエリで引用される候補を増やす。</td></tr>
+            <tr><td>実装チェックリスト</td><td>7日間で確認するページ、FAQ、計測、社内説明の手順を並べる。</td><td>実行可能性を判断しやすくする。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel notice">
+      <h2>このガイドの境界</h2>
+      <p class="section-lead">これは非機密の公開情報チェックです。売上、順位、問い合わせ増、AI回答への掲載は保証しません。個人情報、顧客データ、秘密資料、ログイン情報、APIキー、契約、決済情報は扱いません。</p>
+    </section>
+
+    <footer>
+      <p>Issueや問い合わせは注文、決済、入金の証跡ではないため、売上には数えません。確認可能な注文、決済、入金記録が出た時だけ売上候補として扱います。</p>
+    </footer>
+  </main>
+</body>
+</html>

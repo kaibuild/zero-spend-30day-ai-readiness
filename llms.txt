@@ -51,6 +51,12 @@ Self-serve pages:
 - Fictional delivery samples: https://kaibuild.github.io/zero-spend-30day-ai-readiness/samples.html
 - Public memo builder: https://kaibuild.github.io/zero-spend-30day-ai-readiness/memo-builder.html
 
+Readiness guides:
+
+- AI search and LLM visibility checklist: https://kaibuild.github.io/zero-spend-30day-ai-readiness/ai-search-readiness.html
+- AI support FAQ readiness checklist: https://kaibuild.github.io/zero-spend-30day-ai-readiness/support-faq-readiness.html
+- AI workflow automation spec checklist: https://kaibuild.github.io/zero-spend-30day-ai-readiness/workflow-automation-readiness.html
+
 Public fit check:
 
 The public page can point interested readers to a GitHub public issue template for a non-confidential fit check:

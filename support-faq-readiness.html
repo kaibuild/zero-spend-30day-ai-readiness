@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIサポートFAQ整備チェックリスト | B2B AI Readiness Packs</title>
+  <meta name="description" content="AIチャットボット導入前に必要なFAQ、一次回答、エスカレーション基準、禁止回答リストを公開情報だけで整理するチェックリスト。">
+  <style>
+    :root { color-scheme: light; --ink:#13202b; --muted:#5b6874; --bg:#f6f7f4; --paper:#ffffff; --line:#d8ded8; --green:#0f6b50; --blue:#245c8f; --rust:#8d4b2d; --soft-blue:#e8f0f8; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:linear-gradient(135deg, rgba(36,92,143,.08), transparent 34%), var(--bg); color:var(--ink); letter-spacing:0; }
+    a { color: inherit; }
+    main { width:min(1120px, calc(100vw - 28px)); margin:0 auto; padding:24px 0 48px; }
+    nav { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; margin-bottom:22px; }
+    .nav-links, .hero-actions { display:flex; flex-wrap:wrap; gap:8px; }
+    .eyebrow { display:inline-flex; align-items:center; min-height:28px; padding:0 10px; border:1px solid rgba(36,92,143,.28); border-radius:7px; color:var(--blue); background:var(--soft-blue); font-size:12px; font-weight:820; }
+    h1 { margin:12px 0 0; font-size:clamp(34px,4.6vw,58px); line-height:1.03; max-width:900px; }
+    h2 { margin:0 0 12px; font-size:28px; line-height:1.18; }
+    h3 { margin:0 0 8px; font-size:20px; line-height:1.25; }
+    .lead, .section-lead { color:var(--muted); font-size:16px; line-height:1.75; max-width:850px; }
+    .primary-cta, .ghost-cta { min-height:46px; border-radius:7px; display:inline-flex; align-items:center; justify-content:center; padding:0 16px; font-weight:820; text-decoration:none; }
+    .primary-cta { background:var(--ink); color:white; }
+    .ghost-cta { border:1px solid var(--line); background:rgba(255,255,255,.62); color:var(--ink); }
+    .panel { background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:0 12px 34px rgba(19,32,43,.05); padding:18px; margin-top:18px; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:14px; background:#fbfcfa; min-height:160px; }
+    ul { padding-left:20px; color:#293641; line-height:1.65; }
+    table { width:100%; border-collapse:collapse; min-width:760px; }
+    .table-wrap { overflow-x:auto; }
+    th, td { border-bottom:1px solid var(--line); padding:11px; text-align:left; vertical-align:top; line-height:1.55; }
+    th { background:#f2f5f1; color:#34424e; font-size:13px; }
+    .notice { border-left:4px solid var(--rust); background:#fff9f4; }
+    footer { margin-top:20px; color:var(--muted); font-size:13px; line-height:1.6; }
+    @media (max-width:920px) { .grid { grid-template-columns:1fr; } h1 { font-size:36px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="eyebrow" href="index.html">B2B AI readiness packs</a>
+      <div class="nav-links">
+        <a class="ghost-cta" href="ai-search-readiness.html">AI検索</a>
+        <a class="ghost-cta" href="workflow-automation-readiness.html">自動化仕様</a>
+        <a class="ghost-cta" href="memo-builder.html">公開メモ</a>
+      </div>
+    </nav>
+
+    <header>
+      <span class="eyebrow">Support FAQ / Knowledge Base</span>
+      <h1>AIサポート導入前に、FAQと禁止回答を整える</h1>
+      <p class="lead">AIチャットボットやヘルプ自動化は、FAQ、一次回答、エスカレーション基準、禁止回答リストがないと、誤回答や個人情報処理のリスクが増えます。公開ヘルプと非機密の業務概要だけで、導入前の土台を確認します。</p>
+      <div class="hero-actions">
+        <a class="primary-cta" href="memo-builder.html">公開メモを下書き</a>
+        <a class="ghost-cta" href="samples.html">サンプルを見る</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>AIサポート前の4つの土台</h2>
+      <div class="grid">
+        <div class="card"><h3>FAQ</h3><p class="section-lead">問い合わせ前に読める質問を30問程度まで増やし、対象外や制約も含める。</p></div>
+        <div class="card"><h3>一次回答</h3><p class="section-lead">公開URLで案内できる回答と、個別確認が必要な回答を分ける。</p></div>
+        <div class="card"><h3>エスカレーション</h3><p class="section-lead">請求、返金、本人確認、契約、障害、規制領域は人へ渡す基準を明記する。</p></div>
+        <div class="card"><h3>禁止回答</h3><p class="section-lead">断定、法務判断、個人情報推測、ログイン後情報の回答を禁止する。</p></div>
+        <div class="card"><h3>カテゴリ</h3><p class="section-lead">問い合わせ履歴原文ではなく、非機密カテゴリで整理する。</p></div>
+        <div class="card"><h3>更新手順</h3><p class="section-lead">FAQ更新、レビュー、承認、公開の流れを短く固定する。</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>導入前に分けるべき回答</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>問い合わせ</th><th>AI/FAQで扱いやすい範囲</th><th>人へ渡す条件</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>使い方</td><td>公開ヘルプ、設定手順、用語説明、よくある失敗。</td><td>実アカウント、ログ、個人情報、権限変更が必要な場合。</td></tr>
+            <tr><td>料金</td><td>公開価格、プラン差分、対象外、追加費用の考え方。</td><td>個別見積、契約、請求、返金、支払い情報が必要な場合。</td></tr>
+            <tr><td>障害</td><td>公開ステータス、既知の回避策、問い合わせ前の確認項目。</td><td>個別環境、ログ、SLA、補償、法務判断が必要な場合。</td></tr>
+            <tr><td>データ</td><td>公開ポリシー、保持期間の説明、入力してはいけない情報。</td><td>個人情報、削除依頼、開示請求、契約判断が必要な場合。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel notice">
+      <h2>このガイドの境界</h2>
+      <p class="section-lead">問い合わせ履歴原文、個人情報、ログイン後情報、秘密資料は扱いません。規制領域や法務判断を含む回答は対象外です。</p>
+    </section>
+
+    <footer>
+      <p>Issueや問い合わせは注文、決済、入金の証跡ではないため、売上には数えません。</p>
+    </footer>
+  </main>
+</body>
+</html>

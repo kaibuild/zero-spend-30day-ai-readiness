@@ -11,6 +11,9 @@ Self-serve pages:
 - https://kaibuild.github.io/zero-spend-30day-ai-readiness/fit-check.html
 - https://kaibuild.github.io/zero-spend-30day-ai-readiness/samples.html
 - https://kaibuild.github.io/zero-spend-30day-ai-readiness/memo-builder.html
+- https://kaibuild.github.io/zero-spend-30day-ai-readiness/ai-search-readiness.html
+- https://kaibuild.github.io/zero-spend-30day-ai-readiness/support-faq-readiness.html
+- https://kaibuild.github.io/zero-spend-30day-ai-readiness/workflow-automation-readiness.html
 
 ## Public Fit Check
 
