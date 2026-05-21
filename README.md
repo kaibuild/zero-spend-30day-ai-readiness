@@ -10,6 +10,10 @@ https://kaibuild.github.io/zero-spend-30day-ai-readiness/
 
 If you want to discuss fit for a B2B AI Readiness Pack, open a public fit-check issue with only non-confidential information.
 
+Fit-check issue template:
+
+https://github.com/kaibuild/zero-spend-30day-ai-readiness/issues/new?template=fit-check.yml
+
 Do not include personal names, email addresses, phone numbers, addresses, customer records, private support tickets, credentials, API keys, card details, bank details, contracts, or confidential material.
 
 Allowed inputs:
@@ -33,4 +37,3 @@ A public fit-check issue is not a completed order, payment, invoice, contract, o
 This project does not handle personal data, customer lists, private support tickets, login credentials, API keys, payment details, bank details, contracts, or confidential material.
 
 Medical, legal, financial, tax, insurance, investment, gambling, crypto, adult, weapons, dangerous goods, and other regulated or high-risk domains are out of scope.
-

@@ -47,4 +47,8 @@ https://kaibuild.github.io/zero-spend-30day-ai-readiness/
 
 Public fit check:
 
-The public page can point interested readers to a GitHub public issue template for a non-confidential fit check. The template must not collect personal names, email addresses, phone numbers, customer records, credentials, payment details, bank details, contracts, or confidential material. A public fit-check issue is not a completed order, payment, contract, invoice, or verified revenue record.
+The public page can point interested readers to a GitHub public issue template for a non-confidential fit check:
+
+https://github.com/kaibuild/zero-spend-30day-ai-readiness/issues/new?template=fit-check.yml
+
+The template must not collect personal names, email addresses, phone numbers, customer records, credentials, payment details, bank details, contracts, or confidential material. A public fit-check issue is not a completed order, payment, contract, invoice, or verified revenue record.
