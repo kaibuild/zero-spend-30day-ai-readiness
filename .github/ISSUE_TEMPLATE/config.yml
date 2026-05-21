@@ -1,6 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: 60-second public memo builder
+    url: https://kaibuild.github.io/zero-spend-30day-ai-readiness/memo-builder.html
+    about: Draft a non-confidential fit-check note in the browser before opening an issue.
+  - name: Self-serve fit check
+    url: https://kaibuild.github.io/zero-spend-30day-ai-readiness/fit-check.html
+    about: Check which pack fits before opening a public issue.
   - name: Public product page
     url: https://kaibuild.github.io/zero-spend-30day-ai-readiness/
     about: Read the public product information page before opening a non-confidential fit check.
-

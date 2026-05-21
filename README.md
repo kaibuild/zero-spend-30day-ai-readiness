@@ -2,6 +2,18 @@
 
 Static public information page for B2B AI readiness deliverable packs.
 
+## 60-second public fit check
+
+Use this route when you want to check fit without sharing personal data or confidential material.
+
+1. Open the memo builder: https://kaibuild.github.io/zero-spend-30day-ai-readiness/memo-builder.html
+2. Enter only a public URL and non-confidential context.
+3. Paste the memo into the public fit-check issue template: https://github.com/kaibuild/zero-spend-30day-ai-readiness/issues/new?template=fit-check.yml
+
+Do not include names, email addresses, phone numbers, customer records, private tickets, credentials, API keys, card details, bank details, contracts, or confidential material.
+
+A public fit-check issue is not an order, payment, invoice, contract, or verified revenue record.
+
 Public page:
 
 https://kaibuild.github.io/zero-spend-30day-ai-readiness/

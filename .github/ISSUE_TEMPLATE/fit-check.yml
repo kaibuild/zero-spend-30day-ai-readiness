@@ -1,5 +1,5 @@
-name: "B2B AI Readiness Pack: public fit check"
-description: "Public, non-confidential fit-check note. Do not include personal data or secrets."
+name: "60-second public fit check"
+description: "Start with a public URL and non-confidential context. Do not include personal data or secrets."
 title: "[Fit check] <pack> - <public URL/domain>"
 body:
   - type: markdown
@@ -10,6 +10,11 @@ body:
         Do not include personal names, email addresses, phone numbers, addresses, customer records, private support tickets, credentials, API keys, card details, bank details, contracts, or confidential material.
 
         This issue is not a completed order, payment, contract, invoice, or verified revenue record.
+
+        Fast path:
+        1. Open the public memo builder: https://kaibuild.github.io/zero-spend-30day-ai-readiness/memo-builder.html
+        2. Paste only public, non-confidential context into this issue.
+        3. If you are not sure which pack fits, use the self-serve fit check first: https://kaibuild.github.io/zero-spend-30day-ai-readiness/fit-check.html
   - type: dropdown
     id: pack
     attributes:
@@ -30,28 +35,28 @@ body:
     validations:
       required: true
   - type: textarea
-    id: non_confidential_context
+    id: non_confidential_goal
     attributes:
-      label: Non-confidential context
-      description: Summarize the problem without personal data, customer records, private tickets, credentials, or secrets.
-      placeholder: "Example: The public FAQ is sparse, comparison content is missing, and the team wants a 7-day implementation checklist."
+      label: Non-confidential goal
+      description: Summarize the public, non-confidential problem and desired deliverable.
+      placeholder: "Example: The public FAQ is sparse, comparison content is missing, and the team wants a 7-day implementation checklist. No customer data, private tickets, credentials, or secrets are included."
     validations:
       required: true
-  - type: dropdown
-    id: price_understanding
+  - type: textarea
+    id: current_public_material
     attributes:
-      label: Price understanding
-      description: This confirms only that you understand the listed public price. It is not payment or a contract.
-      options:
-        - "I understand the Standard pack is 200,000 JPY."
-        - "I am only evaluating fit and not ready to discuss an order."
+      label: Current public material
+      description: Optional. List public FAQ, help, pricing, comparison, or workflow pages that can be reviewed.
+      placeholder: "- Public help URL: https://example.com/help\n- Pricing page: https://example.com/pricing\n- Comparison page: none yet"
     validations:
-      required: true
+      required: false
   - type: checkboxes
     id: safety
     attributes:
       label: Safety confirmation
       options:
+        - label: "I understand the Standard pack is 200,000 JPY, and this checkbox is not payment, a contract, an invoice, or an order."
+          required: true
         - label: "I did not include personal data, customer data, credentials, API keys, payment details, bank details, contracts, or confidential material."
           required: true
         - label: "I understand this issue is not a completed order, payment, invoice, contract, or verified revenue record."
